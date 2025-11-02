@@ -1,0 +1,121 @@
+:root {
+    /* Define colors based on Outcomes for easy reference */
+    --color-motivation: #FFD700; /* Gold 🟡 */
+    --color-consistency: #28a745; /* Green 🟢 */
+    --color-data: #007bff;      /* Blue 🔵 */
+    --color-personalization: #6f42c1; /* Purple 🟣 */
+    --color-community: #ffc107; /* Yellow 💛 */
+    --color-ui: #f8f9fa;        /* White ⚪ */
+}
+
+body {
+    background-color: #f4f7f6; /* Light background */
+    font-family: 'Arial', sans-serif;
+}
+
+/* Custom button style for the Personalization outcome */
+.btn-purple, .bg-purple {
+    background-color: var(--color-personalization) !important;
+    border-color: var(--color-personalization) !important;
+    color: white !important;
+}
+
+/* Custom button style for the Data & Self-Reflection outcome */
+.btn-data, .bg-data {
+    background-color: var(--color-data) !important;
+    border-color: var(--color-data) !important;
+    color: white !important;
+}
+.btn-outline-data {
+    color: var(--color-data);
+    border-color: var(--color-data);
+}
+.btn-outline-data:hover {
+    background-color: var(--color-data);
+    color: white;
+}
+
+
+.avatar-box {
+    width: 150px;
+    height: 150px;
+    background-color: #ddd;
+    border: 3px solid var(--color-motivation); /* Gold border for the main hero */
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem; /* Larger icon size */
+    overflow: hidden;
+    color: black;
+}
+
+.avatar-box.large {
+    width: 180px;
+    height: 180px;
+    font-size: 4rem;
+}
+
+
+/* Style for the Habit Items */
+.habit-item {
+    border-left: 5px solid var(--color-consistency); /* Green line for consistency */
+    transition: background-color 0.3s;
+}
+
+.habit-item:hover {
+    background-color: #e9ecef;
+}
+
+.habit-item.completed {
+    background-color: #e9f5e9;
+    border-left-color: darkgreen;
+    text-decoration: line-through;
+    opacity: 0.7;
+}
+
+/* Style for the Task Checkbox/Button */
+.task-complete-btn {
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.task-complete-btn:hover {
+    color: var(--color-consistency); /* Hover to green */
+}
+
+.task-complete-btn.completed {
+    color: var(--color-consistency);
+}
+
+/* Boss Card Styling (Feature 8) */
+.boss-card {
+    border: 2px solid var(--color-data);
+}
+
+.progress {
+    height: 25px;
+    font-weight: bold;
+}
+
+.chart-mock {
+    height: 80px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+    font-size: 0.8rem;
+}
+
+#user-stats span {
+    padding: 0 5px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+}
