@@ -1,4 +1,10 @@
-// Initial Mock Data (Moved into useStates)
+/*
+* Created by: Claire Elsen
+*
+* Collaborators: Generative AI (Gemini) for a basic structure
+*/
+
+// Initial Mock Data
 const initialUserData = {
     heroName: "Hero",
     level: 1,
@@ -23,7 +29,7 @@ let initialJournalEntries = [
     { id: 2, date: '2025-10-29', text: 'Struggled with the "Procrastination Dragon" today. Spent an hour on social media, need to do better tomorrow.'}
 ];
 
-// --- Core Components ---
+// Core Components
 
 // 1. Header Component (Displays Stats)
 const Header = ({ userData }) => (
@@ -41,7 +47,6 @@ const Header = ({ userData }) => (
 
 // 2. Avatar/Hero Card Component
 const HeroCard = ({ userData, setuserData, handleCustomization }) => {
-    // Note: Modal logic is complex in pure React/CDN; we rely on Bootstrap's data attributes
     return (
         <div className="card h-100 shadow-sm">
             <div className="card-header bg-primary text-white">
@@ -134,7 +139,6 @@ const JournalModal = ({ journalEntries, saveReflection, deleteReflection }) => {
         e.preventDefault();
         saveReflection(reflectionText);
         setReflectionText('');
-        // NOTE: In a full project, you'd dismiss the modal here using React control
     };
 
     return (
@@ -218,8 +222,6 @@ const ShopModal = ({ userData, setUserData }) => {
         if (item.id !== 2) {
             alert(`${item.name} purchased! +${item.xpBonus} XP Gained.`);
         }
-
-        // NOTE: In a full project, you'd dismiss the modal here using React control
     };
 
     const shopItems = [
@@ -327,7 +329,7 @@ const AnalyticsModal = ({ habits, userData }) => {
 };
 
 
-// --- Main Application Component ---
+// Main Application Component
 const App = () => {
     const [userData, setUserData] = React.useState(initialUserData);
     const [habits, setHabits] = React.useState(initialHabits);
