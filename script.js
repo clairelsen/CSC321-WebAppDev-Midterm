@@ -533,7 +533,6 @@ const App = () => {
                                     <li>1. Elara (Lvl 15)</li>
                                     <li>2. Kael (Lvl 12)</li>
                                     <li>3. You ({userData.heroName}, Lvl {userData.level})</li>
-                                    <li>4. Zylos (Lvl 9)</li>
                                 </ul>
                             </div>
                             {/* Analytics Button Added Here */}
